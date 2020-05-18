@@ -3,4 +3,4 @@
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/../../"
 . ${BASE_DIR}.env
 
-docker push -f Dockerfile -t $DOCKER_REPO:debian-$DEBIAN_VERSION-tf$TERRAFORM_VERSION  $BASE_DIR
+docker push -t $DOCKER_REPO:debian-$DEBIAN_VERSION-tf$TERRAFORM_VERSION
