@@ -9,5 +9,5 @@ Docker image with azure cli, terraform, helm and other useful tools
 ## Usage
 
 ```bash
-docker run --rm -it -v /path/to/project:/workspace tinslice/azure-cli:debian-10-slim-tf0.12.25 bash
+docker run --rm -it -v /path/to/project:/workspace tinslice/azure-cli:debian-10-slim-tf0.12.28 bash
 ```
