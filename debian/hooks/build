@@ -3,8 +3,8 @@
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/../../"
 . ${BASE_DIR}.env
 
-echo "== building image with debian '$DEBIAN_VERSION' and terraform '$TERRAFORM_VERSION'"
+echo "== building image with debian '${DEBIAN_VERSION}' and terraform '${TERRAFORM_VERSION}'"
 
-docker build \
-  --build-arg DEBIAN_VERSION=$DEBIAN_VERSION --build-arg TERRAFORM_VERSION=$TERRAFORM_VERSION --build-arg HELM_VERSION=$HELM_VERSION \
-  -f Dockerfile -t $DOCKER_REPO:debian-$DEBIAN_VERSION-tf$TERRAFORM_VERSION  $BASE_DIR
+docker build --pull \
+  --build-arg DEBIAN_VERSION=${DEBIAN_VERSION} --build-arg TERRAFORM_VERSION=${TERRAFORM_VERSION} --build-arg HELM_VERSION=${HELM_VERSION} \
+  -f Dockerfile -t ${DOCKER_REPO}:debian-${DEBIAN_VERSION}-tf${TERRAFORM_VERSION}  ${BASE_DIR}
